@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>14 个基础原理速查 | 14 Fundamentals · 野岛社区</title>
+  <meta name="description" content="14 个世界构建基础原理的速查表。Foundation / Craft / Direction 三层结构。" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+SC:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到主内容 / Skip to content</a>
+  <div class="scroll-progress" aria-hidden="true"><div class="scroll-progress-bar" id="scrollBar"></div></div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo"><span class="logo-mark"></span><span class="logo-text">野岛社区</span></a>
+      <nav class="primary-nav" aria-label="主导航">
+        <a href="index.html">法典<span class="nav-sub">Codex</span></a>
+        <a href="archetypes.html">原型<span class="nav-sub">Archetypes</span></a>
+        <a href="fundamentals.html" class="active">14 原理<span class="nav-sub">14 Fundamentals</span></a>
+        <a href="cinematique.html">镜头<span class="nav-sub">Cinematique</span></a>
+        <a href="worlds.html">世界库<span class="nav-sub">Worlds</span></a>
+        <a href="shop.html">合集<span class="nav-sub">Shop</span></a>
+        <a href="academy.html">学院<span class="nav-sub">Academy</span></a>
+        <a href="logs.html">日志<span class="nav-sub">Logs</span></a>
+        <a href="about.html">关于<span class="nav-sub">About</span></a>
+      </nav>
+      <div class="header-tools">
+        <button class="search-btn" id="searchBtn" aria-label="搜索"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></button>
+        <button class="theme-toggle" id="themeToggle" aria-label="切换主题"><svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
+        <button class="hamburger" id="hamburger" aria-label="菜单"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="volume-detail">
+    <a class="back-home" href="index.html">← Library<br><span class="back-sub">返回法典图书馆</span></a>
+    <span class="eyebrow">14 Fundamentals · Cheatsheet<br><span class="eyebrow-sub">14 个世界构建基础原理 · 速查</span></span>
+    <h1 class="detail-title">14 Fundamentals<br/><span class="detail-title-inline">基础原理速查</span></h1>
+    <p class="detail-title-cn">14 个原理 · 三层结构</p>
+
+    <p class="detail-lede">A complete cheat sheet of the 14 fundamentals. Each principle includes the English name, Chinese translation, the tier it belongs to, and a one-line summary. Use this as a daily reference while building.
+      <br><span class="cn-sub">14 个基础原理的完整速查表。每个原理含英文名、中文翻译、所属层级、一句话总结。可作为日常构建时的参考清单。</span></p>
+
+    <!-- FOUNDATION -->
+    <section id="foundation">
+      <h2 class="section-heading">Tier One · Foundation<br><span class="section-sub">第一层 · 基础（生成前）</span></h2>
+      <p class="tier-intro">Foundation is the work you do <em>before</em> you generate a single image. It answers three questions: what does this world believe, what happened before we arrived, and what figures carry its meaning.
+        <br><span class="cn-sub">基础层是你生成第一张图之前要做的事。它回答三个问题：这个世界相信什么？我们到来之前发生了什么？哪些形象承载它的意义？</span></p>
+
+      <div class="fundamental-list" id="foundationList"><!-- JS 渲染 --></div>
+    </section>
+
+    <!-- CRAFT -->
+    <section id="craft">
+      <h2 class="section-heading">Tier Two · Craft<br><span class="section-sub">第二层 · 技艺（让世界可见）</span></h2>
+      <p class="tier-intro">Craft is where the world becomes visible. It governs how your world looks and feels across every single output. These are not random choices — they are a system.
+        <br><span class="cn-sub">技艺层是世界变得可见的地方。它决定你的世界在每一张图上的样子与感觉。这些不是随机选择——它们是一个系统。</span></p>
+
+      <div class="fundamental-list" id="craftList"><!-- JS 渲染 --></div>
+    </section>
+
+    <!-- DIRECTION -->
+    <section id="direction">
+      <h2 class="section-heading">Tier Three · Direction<br><span class="section-sub">第三层 · 方向（组织成世界）</span></h2>
+      <p class="tier-intro">Direction is the hardest discipline because it asks you to stop generating and start thinking. It is the art of sequencing, selecting, and knowing when something is done.
+        <br><span class="cn-sub">方向是最难的纪律——它要求你停下来，别再生成，开始思考。它是排序、选择、知道何时收手的艺术。</span></p>
+
+      <div class="fundamental-list" id="directionList"><!-- JS 渲染 --></div>
+    </section>
+
+    <div class="pull-quote">
+      "These are not rules. They are lenses — ways of looking at your work and asking whether it holds together, whether it earns its place, whether it breathes."
+      <br><span class="cn-sub">"这些不是规则。它们是镜片——让你重新审视自己的作品：它是否兜得住、它是否配得上它的位置、它是否在呼吸。"</span>
+    </div>
+
+    <footer class="detail-footer">
+      <a href="index.html">All volumes<br><span class="cn-sub">所有卷本</span></a>
+      <a href="volume-3.html">Codex 3.0 (long form)<br><span class="cn-sub">第三卷全文</span></a>
+      <a href="archetypes.html">Archetypes<br><span class="cn-sub">原型索引</span></a>
+      <a href="glossary.html">Glossary<br><span class="cn-sub">术语表</span></a>
+    </footer>
+  </main>
+
+  <div class="search-overlay" id="searchOverlay" aria-hidden="true">
+    <div class="search-panel">
+      <div class="search-head">
+        <input type="text" id="searchInput" placeholder="搜索原型、原理、术语..." autocomplete="off" />
+        <button class="search-close" id="searchClose" aria-label="关闭搜索">✕</button>
+      </div>
+      <div class="search-results" id="searchResults"></div>
+      <p class="search-hint">提示：试试 <kbd>Violence</kbd>、<kbd>Thesis</kbd>、<kbd>Atmosphere</kbd></p>
+    </div>
+  </div>
+
+  <button class="back-to-top" id="backToTop" aria-label="回到顶部">↑</button>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

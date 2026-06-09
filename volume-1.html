@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>世界构建法典第一卷 · 免费 Midjourney 风格码 | 野岛社区</title>
+  <meta name="description" content="V1：10 个视觉原型、Midjourney sref 风格码、配色方案、提示词模板。" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Noto+Sans+SC:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到主内容</a>
+  <div class="scroll-progress" aria-hidden="true"><div class="scroll-progress-bar" id="scrollBar"></div></div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo"><span class="logo-mark"></span><span class="logo-text">野岛社区</span></a>
+      <nav class="primary-nav" aria-label="主导航">
+        <a href="index.html">法典<span class="nav-sub">Codex</span></a>
+        <a href="archetypes.html" class="active">原型<span class="nav-sub">Archetypes</span></a>
+        <a href="fundamentals.html">14 原理<span class="nav-sub">14 Fundamentals</span></a>
+        <a href="cinematique.html">镜头<span class="nav-sub">Cinematique</span></a>
+        <a href="worlds.html">世界库<span class="nav-sub">Worlds</span></a>
+        <a href="shop.html">合集<span class="nav-sub">Shop</span></a>
+        <a href="academy.html">学院<span class="nav-sub">Academy</span></a>
+        <a href="logs.html">日志<span class="nav-sub">Logs</span></a>
+        <a href="about.html">关于<span class="nav-sub">About</span></a>
+      </nav>
+      <div class="header-tools">
+        <button class="search-btn" id="searchBtn" aria-label="搜索"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></button>
+        <button class="theme-toggle" id="themeToggle" aria-label="切换主题"><svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
+        <button class="hamburger" id="hamburger" aria-label="菜单"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="volume-detail">
+    <a class="back-home" href="index.html">← All Codex volumes<br><span class="back-sub">返回所有法典卷本</span></a>
+    <span class="eyebrow">Codex 01 · Free<br><span class="eyebrow-sub">法典第一卷 · 永久免费</span></span>
+    <h1 class="detail-title">World Building Codex<br/>Volume 1</h1>
+    <p class="detail-title-cn">世界构建法典 · 第一卷</p>
+    <p class="detail-lede">10 visual archetypes, Midjourney sref + pcodes, and the foundations of consistent AI world design.<br>
+      <span class="cn-sub">10 个视觉原型，Midjourney 风格码与参数码，以及一致的 AI 世界设计基础。</span></p>
+    <p class="detail-intro">
+      The first released Codex, forever free. Ten visual archetypes that introduced the VVSVS methodology — the starting point for turning single images into a coherent visual world.
+      <br><span class="cn-sub">第一版发布的法典，永久免费。十个引出 VVSVS 方法论的视觉原型——这是把单张图像转化为连贯视觉世界的起点。</span>
+    </p>
+
+    <!-- HOW TO USE -->
+    <section class="theory-block">
+      <h3>How to use V1 · 第一卷使用方法<br><span class="cn-h-sub">3 步上手</span></h3>
+      <p>1. Pick an archetype that matches the world you want to build.<br>
+        2. Copy the prompt template and the sref code into Midjourney V7.<br>
+        3. Vary the subject — keep the sref unchanged. Watch the world stay coherent.
+        <br><span class="cn-sub">1. 选一个与你想要的世界匹配的原型；2. 把提示词模板和 sref 风格码一起复制到 Midjourney V7；3. 变换主体，但保留 sref——你会看到世界始终保持连贯。</span>
+      </p>
+    </section>
+
+    <h2 class="section-heading">The 10 Visual Archetypes<br><span class="section-sub">十个视觉原型</span></h2>
+    <p class="tier-intro">Click any card to see the full prompt template, sref code, palette, and best-use cases.
+      <br><span class="cn-sub">点击任意卡片查看完整提示词、风格码、配色与适用场景。</span></p>
+
+    <div class="archetype-grid" id="v1Grid"><!-- JS 渲染 V1 原型 --></div>
+
+    <section class="theory-block">
+      <h3>The Foundations of V1<br><span class="cn-h-sub">第一卷的方法论</span></h3>
+      <p>
+        Volume 1 establishes the VVSVS methodology: a set of <strong>Visual Archetypes</strong> that serve as load-bearing structures for any world you build.
+        <br><span class="cn-sub">第一卷确立了 VVSVS 方法论：一组作为"承重结构"的视觉原型。</span>
+      </p>
+      <p>
+        The 10 archetypes here are not prompts. They are <strong>containers</strong> — vocabularies you can extend, recombine, and pressure-test.
+        <br><span class="cn-sub">这里的 10 个原型不是提示词。它们是<strong>容器</strong>——可被扩展、组合和压力测试的词汇表。</span>
+      </p>
+      <div class="pull-quote">
+        "An archetype is not an image. It is a structure for thinking about an image."
+        <br><span class="cn-sub">"原型不是图像。它是思考图像的一种结构。"</span>
+      </div>
+    </section>
+
+    <footer class="detail-footer">
+      <a href="index.html">All volumes<br><span class="cn-sub">所有卷本</span></a>
+      <a href="volume-2.html">World Building Codex V2 →<br><span class="cn-sub">世界构建法典第二卷</span></a>
+      <a href="volume-3.html">Codex 3.0<br><span class="cn-sub">法典 3.0</span></a>
+      <a href="archetypes.html">All 30 Archetypes<br><span class="cn-sub">30 个原型索引</span></a>
+    </footer>
+  </main>
+
+  <!-- 弹层 -->
+  <div class="modal" id="archModal" aria-hidden="true" role="dialog">
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-panel" tabindex="-1">
+      <button class="modal-close" data-close aria-label="关闭">✕</button>
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <div class="search-overlay" id="searchOverlay" aria-hidden="true">
+    <div class="search-panel">
+      <div class="search-head">
+        <input type="text" id="searchInput" placeholder="搜索原型、原理、术语..." autocomplete="off" />
+        <button class="search-close" id="searchClose" aria-label="关闭搜索">✕</button>
+      </div>
+      <div class="search-results" id="searchResults"></div>
+    </div>
+  </div>
+
+  <button class="back-to-top" id="backToTop" aria-label="回到顶部">↑</button>
+
+  <script src="data.js"></script>
+  <script>
+    // 渲染 V1 的 10 个原型（用 data.js 中的数据）
+    const grid = document.getElementById('v1Grid');
+    if (grid && window.YEDAO_DATA) {
+      const v1 = window.YEDAO_DATA.ARCHETYPES.filter(a => a.vol === 1);
+      grid.innerHTML = v1.map((a, i) => `
+        <article class="archetype-card ${a.tone} fade-in" id="${a.id}">
+          <button class="arch-open" data-arch="${a.id}">
+            <div class="arch-num">${String(i+1).padStart(2,'0')}</div>
+            <div class="arch-desc">${a.summary}</div>
+            <div class="arch-desc-cn">${a.cn_summary}</div>
+            <div class="arch-name">${a.name}<span class="arch-name-cn">${a.cn}</span></div>
+          </button>
+        </article>
+      `).join('');
+    }
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
