@@ -402,6 +402,77 @@
     if (btn) btn.click();
   };
 
+  // ---------- 15. 投稿表单 · 智能提交 ----------
+  function initSubmitForm() {
+    const params = new URLSearchParams(window.location.search);
+    const justSubmitted = params.get('submitted') === 'true';
+    const form = document.querySelector('.submit-form');
+    if (!form) return;
+
+    // If the admin backend is reachable on the same origin, use the JSON API.
+    // Otherwise fall back to Netlify Forms (data-netlify="true") for static hosting.
+    const adminProbe = '/api/submit';
+    let usesAdminApi = false;
+
+    if (justSubmitted) {
+      const section = document.getElementById('submit');
+      if (section) {
+        const banner = document.createElement('div');
+        banner.className = 'success';
+        banner.style.cssText = 'padding:16px 20px;border-radius:4px;background:rgba(34,197,94,.1);border:1px solid rgba(34,197,94,.3);color:#4ade80;margin-bottom:24px;font-size:15px;';
+        banner.innerHTML = '<strong>✓ 投稿已收到！</strong> Thank you — your submission has been received. We will review it within 7 days.<br><span class="cn-sub" style="font-family:var(--font-cn);color:rgba(255,255,255,.5);font-size:13px">我们会在 7 天内审阅并回复。</span>';
+        section.querySelector('.section-title').insertAdjacentElement('afterend', banner);
+        section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+      const url = new URL(window.location);
+      url.searchParams.delete('submitted');
+      window.history.replaceState({}, '', url);
+    }
+
+    form.addEventListener('submit', async function (e) {
+      e.preventDefault();
+      const btn = form.querySelector('button[type=submit]');
+      const oldText = btn.textContent;
+      btn.disabled = true;
+      btn.textContent = '提交中… / Submitting…';
+
+      // Clear any previous status
+      form.querySelectorAll('.success,.error').forEach(el => el.remove());
+
+      const formData = new FormData(form);
+      const payload = {};
+      formData.forEach((v, k) => { payload[k] = v; });
+
+      try {
+        const res = await fetch(adminProbe, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+        if (res.ok) {
+          const banner = document.createElement('div');
+          banner.className = 'success';
+          banner.style.cssText = 'padding:16px 20px;border-radius:4px;background:rgba(34,197,94,.1);border:1px solid rgba(34,197,94,.3);color:#4ade80;margin-bottom:16px;font-size:15px;';
+          banner.innerHTML = '<strong>✓ 投稿已收到！</strong> Thank you — your submission has been received. We will review it within 7 days.<br><span class="cn-sub" style="font-family:var(--font-cn);color:rgba(255,255,255,.5);font-size:13px">我们会在 7 天内审阅并回复。</span>';
+          form.insertBefore(banner, form.firstChild);
+          form.reset();
+        } else {
+          // Fall back to native form submit (Netlify)
+          form.removeAttribute('onsubmit');
+          form.submit();
+        }
+      } catch (err) {
+        // Network failed (static hosting) — let Netlify handle it
+        form.removeAttribute('onsubmit');
+        form.submit();
+      } finally {
+        btn.disabled = false;
+        btn.textContent = oldText;
+      }
+    });
+  }
+  initSubmitForm();
+
   // 初始化滚动
   onScroll();
 })();
