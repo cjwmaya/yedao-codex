@@ -590,6 +590,91 @@ body.menu-open .hamburger span:nth-child(3) { transform: translateY(-5.5px) rota
 .detail-footer a {
   color: var(--fg-muted); font-size: 13px; font-weight: 500; line-height: 1.4;
 }
+.detail-footer .partners-section {
+  flex-basis: 100%;
+  margin-top: 24px;
+  padding-top: 24px;
+}
+
+/* ============== SITE FOOTER (opinions) ============== */
+.site-footer {
+  border-top: 1px solid var(--border);
+  padding: 56px 0 32px;
+  margin-top: 96px;
+  color: var(--fg);
+}
+.footer-inner {
+  max-width: 1200px; margin: 0 auto; padding: 0 32px;
+  display: flex; flex-wrap: wrap; gap: 32px; align-items: flex-start; justify-content: space-between;
+}
+.footer-brand { font-size: 18px; font-weight: 700; letter-spacing: 0.04em; }
+.footer-cn { font-size: 12px; color: var(--fg-dim); letter-spacing: 0.08em; margin-top: 4px; }
+.footer-links { display: flex; flex-wrap: wrap; gap: 18px; }
+.footer-links a { color: var(--fg-muted); font-size: 13px; text-decoration: none; }
+.footer-links a:hover { color: var(--fg); }
+.footer-bottom {
+  max-width: 1200px; margin: 32px auto 0; padding: 24px 32px 0;
+  border-top: 1px solid var(--border);
+  font-size: 11px; letter-spacing: 0.1em; color: var(--fg-dim);
+}
+.site-footer .partners-section {
+  max-width: 1200px; margin: 32px auto 0; padding: 24px 32px 0;
+  border-top: 1px dashed var(--border);
+  border-bottom: none;
+  padding-top: 24px;
+}
+
+/* ============== PARTNERS (合作链接) ============== */
+.partners-section {
+  margin-top: 36px;
+  padding-top: 24px;
+  border-top: 1px dashed var(--border);
+  display: flex; flex-wrap: wrap; gap: 16px 28px; align-items: center;
+}
+.partners-h {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--fg-dim);
+  flex-shrink: 0;
+}
+.partners-h .cn-sub {
+  margin-left: 8px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: none;
+}
+.partners-list {
+  list-style: none; margin: 0; padding: 0;
+  display: flex; flex-wrap: wrap; gap: 12px 14px;
+}
+.partner-link {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 8px 14px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--card, transparent);
+  color: var(--fg);
+  font-size: 13px; font-weight: 500;
+  text-decoration: none;
+  transition: border-color .18s ease, transform .18s ease, background .18s ease;
+  line-height: 1.2;
+}
+.partner-link:hover {
+  border-color: var(--accent, #888);
+  transform: translateY(-1px);
+  background: rgba(255,255,255,0.04);
+}
+.partner-link[rel~="external"]::after {
+  content: "↗";
+  font-size: 11px; opacity: 0.6; margin-left: 2px;
+}
+.partner-mark { font-size: 16px; line-height: 1; }
+.partner-text { display: inline-flex; flex-direction: column; line-height: 1.25; }
+.partner-zh { font-size: 13px; font-weight: 600; }
+.partner-en { font-size: 11px; color: var(--fg-dim); letter-spacing: 0.02em; }
 
 /* ============== ARCHETYPE GRID ============== */
 .filter-bar {
